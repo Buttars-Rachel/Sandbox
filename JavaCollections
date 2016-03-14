@@ -1,5 +1,6 @@
 import java.util.TreeMap;
 
+//I created a class Month that will print out each number of the month and the name of the month
 public class Month{
    public static void main(String[] args) {
       System.out.println("Print Months Example\n");
