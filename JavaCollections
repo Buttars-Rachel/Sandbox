@@ -1,0 +1,24 @@
+import java.util.TreeMap;
+
+public class Month{
+   public static void main(String[] args) {
+      System.out.println("Print Months Example\n");
+      TreeMap tMap = new TreeMap();
+      tMap.put(1, "January");
+      tMap.put(2, "February");
+      tMap.put(3, "March");
+      tMap.put(4, "April");
+      tMap.put(5, "May");
+      tMap.put(6, "June");
+      tMap.put(7, "July");
+      tMap.put(8, "August");
+      tMap.put(9, "September");
+      tMap.put(10, "October");
+      tMap.put(11, "November");
+      tMap.put(12, "December");
+      System.out.println("Number (key) of the month: " 
+      + tMap.keySet());
+      System.out.println("Name of the month: " 
+      + tMap.values());
+   }
+}
