@@ -1,0 +1,66 @@
+public class Patron {
+   private int id;
+   private String firstName; 
+   private String lastName;   
+   private int status;  
+
+   public Patron() {}
+   public Patron(String fname, String lname, int status) {
+      this.firstName = fname;
+      this.lastName = lname;
+      this.salary = status;
+   }
+   public int getId() {
+      return id;
+   }
+   public void setId( int id ) {
+      this.id = id;
+   }
+   public String getFirstName() {
+      return firstName;
+   }
+   public void setFirstName( String first_name ) {
+      this.firstName = first_name;
+   }
+   public String getLastName() {
+      return lastName;
+   }
+   public void setLastName( String last_name ) {
+      this.lastName = last_name;
+   }
+   public int getStatus() {
+      return status;
+   }
+   public void setStatus( int status ) {
+      this.status = status;
+   }
+}
+
+create table PATRON (
+   id INT NOT NULL auto_increment,
+   first_name VARCHAR(20) default NULL,
+   last_name  VARCHAR(20) default NULL,
+   status     INT  default NULL,
+   PRIMARY KEY (id)
+);
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping>
+   <class name="Patron" table="PATRON">
+      <meta attribute="class-description">
+         This class contains the patron detail. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="resident"/>
+      </id>
+      <property name="firstName" column="first_name" type="string"/>
+      <property name="lastName" column="last_name" type="string"/>
+      <property name="status" column="status" type="int"/>
+   </class>
+</hibernate-mapping>
+
+
